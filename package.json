@@ -1,6 +1,6 @@
 {
   "name": "@quantumlabs/psql-aws-backup",
-  "version": "1.1.0",
+  "version": "1.1.1",
   "description": "Backup PostgreSQL database direct to Amazon S3",
   "main": "index.js",
   "scripts": {
