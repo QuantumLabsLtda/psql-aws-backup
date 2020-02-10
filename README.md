@@ -6,3 +6,4 @@
 
 > Easily backups PostgreSQL databases into Amazon S3 Bucket 🤠
 
+[![npm version](https://badge.fury.io/js/%40quantumlabs%2Fpsql-aws-backup.svg)](https://badge.fury.io/js/%40quantumlabs%2Fpsql-aws-backup)
