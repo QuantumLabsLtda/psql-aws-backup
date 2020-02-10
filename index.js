@@ -31,9 +31,11 @@ program
   .version('1.0.0')
   .command('backup <DATABASE_URL> <BUCKET> <FOLDER>')
   .description('backup a postgreSQL database and upload the backup to S3 bucket')
-  .option('--create-copy', 'Create a copy of the backup in the current directory')
+  .option('--create-copy', 'create a copy of the backup in the current directory')
+  .option('--verbose', 'verbose mode')
   .action(function (DATABASE_URL, BUCKET, FOLDER, optionObj) {
-    const createCopy = optionObj
+    const createCopy = optionObj.createCopy
+    const verbose = optionObj.verbose
 
     if (!env.s3.KEY || !env.s3.SECRET) {
       log(chalk.yellow('You need to config the S3 keys.'))
@@ -52,7 +54,7 @@ program
         process.exit(1)
       }
 
-      Backup.backup(DATABASE_URL, BUCKET, FOLDER, createCopy)
+      Backup.backup(DATABASE_URL, BUCKET, FOLDER, createCopy, verbose)
     }
   })
 

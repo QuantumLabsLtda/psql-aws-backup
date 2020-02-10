@@ -9,12 +9,12 @@ const env = require('../config/env.json')
 const rootPath = path.dirname(require.main.filename || process.mainModule.filename)
 
 class Backup {
-  static backup (DATABASE_URL, BUCKET, FOLDER, createCopy) {
+  static backup (DATABASE_URL, BUCKET, FOLDER, createCopy, verbose) {
     const today = DateTime.local().toISO()
     const fileName = `backup${today}.sql`
     const filePath = path.resolve(`${rootPath}/tmp/${fileName}`)
 
-    if (shell.exec(`pg_dump ${DATABASE_URL} -f ${filePath} --verbose`).code !== 0) {
+    if (shell.exec(`pg_dump ${DATABASE_URL} -f ${filePath} ${(verbose ? '--verbose' : '')}`).code !== 0) {
       console.log(chalk.red('Error backuping database.'))
       shell.exit(1)
     } else {
