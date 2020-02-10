@@ -1,13 +1,13 @@
 {
-  "name": "psql-aws-backup",
+  "name": "@quantumlabs/psql-aws-backup",
   "version": "1.1.0",
   "description": "",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "",
-  "license": "ISC",
+  "author": "Gustavo Andrade <gustavo@quantumlabs.com.br>",
+  "license": "BSD 3-Clause",
   "dependencies": {
     "aws-sdk": "^2.614.0",
     "chalk": "^3.0.0",

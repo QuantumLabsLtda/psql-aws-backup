@@ -1,3 +1,8 @@
+/**
+ * Quantum psql-aws-backup
+ * Copyright(c) 2020s Quantum Labs Ltda.
+ * BSD 3-Clause Licensed
+ */
 /* eslint-disable space-before-function-paren */
 const path = require('path')
 const fs = require('fs')

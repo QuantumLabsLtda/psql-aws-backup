@@ -1,4 +1,9 @@
 #!/usr/bin/env node
+/**
+ * Quantum psql-aws-backup
+ * Copyright(c) 2020s Quantum Labs Ltda.
+ * BSD 3-Clause Licensed
+ */
 const fs = require('fs')
 const chalk = require('chalk')
 const inquirer = require('inquirer')
