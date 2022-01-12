@@ -63,4 +63,4 @@ When you use `--create-copy` you also creates a local copy of the `.sql` file wh
 - [ ] Backup presets
 
 ## Credits
-Create with ♥ by QuantumLabs.
+Created with ♥ by QuantumLabs.
